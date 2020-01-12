@@ -24,7 +24,7 @@ namespace IngameScript
 		#region untouched
 		/*
 		Blargmode's Ascent Cruise Control
-		Version 2.0 (2020-01-11)
+		Version 2.0 (2020-01-13)
 
 		Tired of wasting fuel when leaving a gravity well? What you need is cruise control!
 
@@ -35,7 +35,7 @@ namespace IngameScript
 
 		1. Install script.
 		2. Sit in a flight seat for a few seconds.
-		   You can add the programmable block to the toolbar with the argument 'cruise'.
+			You can add the programmable block to the toolbar with the argument 'cruise'.
 
 		The script looks for an occupied flight on startup to determine what is forward. 
 		Once one is found, it stops looking and saves the seat internally. If the Wrong seat is stored, you can hop into
@@ -43,7 +43,7 @@ namespace IngameScript
 
 
 		___/ Usage \\__________
-		
+
 		Press the button you set up in step two to turn the cruise control on or off.
 
 
@@ -53,7 +53,7 @@ namespace IngameScript
 
 		You trigger it by sending commands, either via a toolbar or directly in the programmable block. 
 		Set up the former by adding the programmable block to a toolbar and selecting Run, then type in your trigger command.
-		
+
 		The trigger commands are 'cruise' and 'align'. To toggle cruise or align on or off. 
 		if you add the argument 'on' or 'off' if you don't want the button to toggle. Example: 'cruise off'
 		Cruise control also accepts a number, target speed, which can be supplied like this: 'cruise 95'. 
@@ -106,13 +106,13 @@ namespace IngameScript
 		Now you can run 'cruise -99' for it to go down and 'cruise 99' to go up, and it will slow down and stop
 		at each end. 
 		You can even build stations there.
-		I reccomend using connectors to align it at each station. So that it can't drift sideways if you mess
-		around up there. I also reccomend not using a flight seat that can steer the ship. Use a button panel instead.
+		I recommend using connectors to align it at each station. So that it can't drift sideways if you mess
+		around up there. I also recommend not using a flight seat that can steer the ship. Use a button panel instead.
 		You can leave cruise control and align turned on even when docked. 
 
 		A word of warning though. 
 		The controlled descent does not take ship weight and thrust into consideration.
-		Ff your ship is too weak, it might leave a crater.
+		If your ship is too weak, it might leave a crater.
 
 		*/
 		#endregion
