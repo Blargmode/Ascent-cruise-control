@@ -8,16 +8,25 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Clipboard|Any CPU = Clipboard|Any CPU
+		Clipboard|x64 = Clipboard|x64
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{447C4BE7-013E-4EA9-827C-C7C85788F9B2}.Clipboard|Any CPU.ActiveCfg = Clipboard|Any CPU
 		{447C4BE7-013E-4EA9-827C-C7C85788F9B2}.Clipboard|Any CPU.Build.0 = Clipboard|Any CPU
+		{447C4BE7-013E-4EA9-827C-C7C85788F9B2}.Clipboard|x64.ActiveCfg = Clipboard|x64
+		{447C4BE7-013E-4EA9-827C-C7C85788F9B2}.Clipboard|x64.Build.0 = Clipboard|x64
 		{447C4BE7-013E-4EA9-827C-C7C85788F9B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{447C4BE7-013E-4EA9-827C-C7C85788F9B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{447C4BE7-013E-4EA9-827C-C7C85788F9B2}.Debug|x64.ActiveCfg = Debug|x64
+		{447C4BE7-013E-4EA9-827C-C7C85788F9B2}.Debug|x64.Build.0 = Debug|x64
 		{447C4BE7-013E-4EA9-827C-C7C85788F9B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{447C4BE7-013E-4EA9-827C-C7C85788F9B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{447C4BE7-013E-4EA9-827C-C7C85788F9B2}.Release|x64.ActiveCfg = Release|x64
+		{447C4BE7-013E-4EA9-827C-C7C85788F9B2}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
