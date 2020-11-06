@@ -26,7 +26,7 @@ namespace IngameScript
 		public bool Enabled { get; private set; }
 
 		IMyShipController controller;
-		IMyTextSurface screen;
+		//IMyTextSurface screen;
 
 		//These are sorted according to which way they push.
 		Dictionary<Base6Directions.Direction, List<IMyThrust>> electricThrusters;
@@ -71,8 +71,8 @@ namespace IngameScript
 		{
 			this.controller = controller;
 
-			screen = (controller as IMyTextSurfaceProvider).GetSurface(0);
-			screen.ContentType = ContentType.TEXT_AND_IMAGE;
+			//screen = (controller as IMyTextSurfaceProvider).GetSurface(0);
+			//screen.ContentType = ContentType.TEXT_AND_IMAGE;
 
 			electricThrusters = new Dictionary<Base6Directions.Direction, List<IMyThrust>>()
 			{
@@ -159,7 +159,7 @@ namespace IngameScript
 					}
 					if (newTarget < TargetSpeed) AdaptiveTargetSpeed = TargetSpeed;
 					else AdaptiveTargetSpeed = newTarget;
-					screen.WriteText("\nGnd alt: " + height.ToString("n3"), true);
+					//screen.WriteText("\nGnd alt: " + height.ToString("n3"), true);
 				}
 			}
 			else
@@ -176,7 +176,7 @@ namespace IngameScript
 					}
 					if (newTarget > TargetSpeed) AdaptiveTargetSpeed = TargetSpeed;
 					else AdaptiveTargetSpeed = newTarget;
-					screen.WriteText("\nSea alt: " + height.ToString("n3"), true);
+					//screen.WriteText("\nSea alt: " + height.ToString("n3"), true);
 				}
 				else
 				{
@@ -243,10 +243,10 @@ namespace IngameScript
 			//This is not more stable than what I did before.
 
 			
-			screen.WriteText("\nTS: " + AdaptiveTargetSpeed.ToString("n3") + ", S: " + Speed.ToString("n3"), true);
-			screen.WriteText("\nerr " + errorMagnitude.ToString("n3"), true);
-			//screen.WriteText("\nneed " + thrustNeeded.ToString("n3"), true);
-			screen.WriteText("\nthr " + (electricThrust + hydroThrust).ToString("n3"), true);
+			//screen.WriteText("\nTS: " + AdaptiveTargetSpeed.ToString("n3") + ", S: " + Speed.ToString("n3"), true);
+			//screen.WriteText("\nerr " + errorMagnitude.ToString("n3"), true);
+			////screen.WriteText("\nneed " + thrustNeeded.ToString("n3"), true);
+			//screen.WriteText("\nthr " + (electricThrust + hydroThrust).ToString("n3"), true);
 
 			//Dividing by zero will happen here, but since it's float it will result in infinity instead of exception, which is fine.
 			float thrustOverride = MathHelper.Clamp((float)weight / electricThrust, 0, 1); //Convert to percent 
@@ -311,8 +311,8 @@ namespace IngameScript
 				hydrogenThrusters[forward][i].ThrustOverridePercentage = hydroThrustOverride;
 			}
 
-			screen.WriteText("\novr-rev " + thrustOverrideRev.ToString("n3"), true);
-			screen.WriteText("\novr-hrev " + hydroThrustOverrideRev.ToString("n3"), true);
+			//screen.WriteText("\novr-rev " + thrustOverrideRev.ToString("n3"), true);
+			//screen.WriteText("\novr-hrev " + hydroThrustOverrideRev.ToString("n3"), true);
 
 			for (int i = 0; i < electricThrusters[reverse].Count; i++)
 			{
@@ -400,7 +400,7 @@ namespace IngameScript
 					}
 					if (newTarget > TargetSpeed) AdaptiveTargetSpeed = TargetSpeed;
 					else AdaptiveTargetSpeed = newTarget;
-					screen.WriteText("\nSea alt: " + height.ToString("n3"), true);
+					//screen.WriteText("\nSea alt: " + height.ToString("n3"), true);
 				}
 				else
 				{
@@ -500,9 +500,9 @@ namespace IngameScript
 				hydrogenThrusters[forward][i].ThrustOverridePercentage = hydroThrustOverride;
 			}
 
-			screen.WriteText("\nTS: " + AdaptiveTargetSpeed.ToString("n3") + ", S: " + speed.ToString("n3"), true);
-			screen.WriteText("\nE: " + electricThrusters[forward].Count + ", ovr " + thrustOverride.ToString("p3") + ", thr " + electricThrust.ToString("n3"), true);
-			screen.WriteText("\nH " + hydrogenThrusters[forward].Count + ", ovr " + hydroThrustOverride.ToString("p3") + ", thr " + hydroThrust.ToString("n3"), true);
+			//screen.WriteText("\nTS: " + AdaptiveTargetSpeed.ToString("n3") + ", S: " + speed.ToString("n3"), true);
+			//screen.WriteText("\nE: " + electricThrusters[forward].Count + ", ovr " + thrustOverride.ToString("p3") + ", thr " + electricThrust.ToString("n3"), true);
+			//screen.WriteText("\nH " + hydrogenThrusters[forward].Count + ", ovr " + hydroThrustOverride.ToString("p3") + ", thr " + hydroThrust.ToString("n3"), true);
 			
 		}
 

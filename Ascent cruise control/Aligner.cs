@@ -26,7 +26,7 @@ namespace IngameScript
 
 		IMyShipController controller;
 		List<IMyGyro> gyros;
-		IMyTextSurface screen;
+		//IMyTextSurface screen;
 
 		bool _gyroOverride = false;
 		bool GyroOverride
@@ -53,8 +53,8 @@ namespace IngameScript
 			this.controller = controller;
 			this.gyros = gyros;
 
-			screen = (controller as IMyTextSurfaceProvider).GetSurface(0);
-			screen.ContentType = ContentType.TEXT_AND_IMAGE;
+			//screen = (controller as IMyTextSurfaceProvider).GetSurface(0);
+			//screen.ContentType = ContentType.TEXT_AND_IMAGE;
 			
 			//GyroOverride = true;
 
@@ -93,7 +93,7 @@ namespace IngameScript
 
 			striveForZero *= 5; //Increase speed in aligning
 
-			screen.WriteText("\n" + striveForZero.ToString("n3"), true);
+			//screen.WriteText("\n" + striveForZero.ToString("n3"), true);
 			//screen.WriteText("\n" + controller.RotationIndicator.Y.ToString("n3"), true);
 
 			ApplyGyroOverride(-striveForZero.Z, controller.RotationIndicator.Y, -striveForZero.X, gyros, controller as IMyTerminalBlock);

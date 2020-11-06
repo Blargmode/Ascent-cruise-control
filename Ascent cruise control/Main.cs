@@ -66,7 +66,7 @@ namespace IngameScript
 
 		int detailedInfoTextWith = 40;
 
-		IMyTextSurface screen; //For debuygging
+		//IMyTextSurface screen; //For debuygging
 		
 
 		public Program()
@@ -94,7 +94,7 @@ namespace IngameScript
 				if ((updateType & UpdateType.Update10) != 0)
 				{
 
-					screen.WriteText($"Align: {(Align != null && Align.Enabled ? "on" : "off")}, Cruise: {(Cruise != null && Cruise.Enabled ? "on" : "off")}");
+					//screen.WriteText($"Align: {(Align != null && Align.Enabled ? "on" : "off")}, Cruise: {(Cruise != null && Cruise.Enabled ? "on" : "off")}");
 					if (Align != null && Align.Enabled)
 					{
 						Align.Update();
@@ -810,16 +810,16 @@ namespace IngameScript
 			Settings.Set(SettingsHeader, SettingsController, $"{MainController.Position.X};{MainController.Position.Y};{MainController.Position.Z}");
 			SaveSettings();
 
-			screen = (MainController as IMyTextSurfaceProvider).GetSurface(0);
-			screen.ContentType = ContentType.TEXT_AND_IMAGE;
+			//screen = (MainController as IMyTextSurfaceProvider).GetSurface(0);
+			//screen.ContentType = ContentType.TEXT_AND_IMAGE;
 
-			var sprites = new List<string>();
-			screen.GetSprites(sprites);
-			Me.CustomData = "";
-			foreach (var item in sprites)
-			{
-				Me.CustomData += item + "\n";
-			}
+			//var sprites = new List<string>();
+			//screen.GetSprites(sprites);
+			//Me.CustomData = "";
+			//foreach (var item in sprites)
+			//{
+			//	Me.CustomData += item + "\n";
+			//}
 
 			#endregion
 
